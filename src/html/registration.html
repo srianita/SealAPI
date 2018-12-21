@@ -1,0 +1,63 @@
+<div class="card mb-3">
+	<h5 class="card-header">Registration</h5>
+	<div class="card-body">
+		<form id="registration_form" onSubmit="return RegistrationSubmit();">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="registration_fullname">Fullname</label>
+						<input id="registration_fullname" class="form-control" name="fullname" type="text" placeholder="Fullname" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_username">Username</label>
+						<input id="registration_username" class="form-control" name="username" type="text" placeholder="Username" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_email">E-mail</label>
+						<input id="registration_email" class="form-control" name="email" type="email" placeholder="E-mail" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_password">Password</label>
+						<input id="registration_password" class="form-control" name="password" type="password" placeholder="Password" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_retype">Retype Password</label>
+						<input id="registration_retype" class="form-control" name="retype" type="password" placeholder="Retype Password" required data-rule-equalto="#registration_password" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="registration_country">Country</label>
+						<input id="registration_country" class="form-control" name="country" type="text" placeholder="ISO 3166-1 alpha-2" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_state">State</label>
+						<input id="registration_state" class="form-control" name="state" type="text" placeholder="State" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_location">Location</label>
+						<input id="registration_location" class="form-control" name="location" type="text" placeholder="Location" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_organization">Organization</label>
+						<input id="registration_organization" class="form-control" name="organization" type="text" placeholder="Organization" required />
+					</div>
+					<div class="form-group">
+						<label for="registration_unit">Organizational Unit</label>
+						<input id="registration_unit" class="form-control" name="unit" type="text" placeholder="Organizational Unit" required />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button id="registration_submit" type="submit" class="btn btn-primary float-right">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="card-footer">
+		<p class="card-text text-justify">
+			Registrasi data pribadi, digunakan untuk authentikasi ketika seseorang membuat gambar untuk di Trusted Seal.
+		</p>
+	</div>
+</div>

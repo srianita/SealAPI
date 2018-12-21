@@ -1,0 +1,14 @@
+#notify {
+	position: fixed;
+	top: 24px;
+	right: 16px;
+	z-index: 1342177280;
+}
+
+#notify > div > i:first-child {
+	margin-right: 8px;
+}
+
+#notify > div > button:last-child {
+	margin-left: 8px;
+}

@@ -1,0 +1,26 @@
+<div class="card mb-3">
+	<h5 class="card-header">Sealing Image</h5>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<p class="card-text text-justify">
+					Input token disini adalah token yang didapat setelah melakukan login. Maka system akan merespon dan memberikan token.
+					Token tersebut valid selama 3 jam saja, harap diperhatikan.
+				</p>
+			</div>
+			<form id="seal_form" class="col-md-6" action="/api" target="_blank" onSubmit="return SealSubmit();">
+				<div class="form-group">
+					<label for="seal_token">Token</label>
+					<input id="seal_token" class="form-control" name="token" type="text" placeholder="Token" required />
+				</div>
+				<div class="form-group">
+					<label for="seal_image">Image</label>
+					<input id="seal_image" class="form-control" name="image" type="file" placeholder="filetype PNG, JPG or BMP" required multiple />
+				</div>
+
+				<button id="seal_submit" type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+	<div id="seal_analyze" class="card-footer">&nbsp;</div>
+</div>

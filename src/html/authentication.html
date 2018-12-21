@@ -1,0 +1,25 @@
+<div class="card mb-3">
+	<h5 class="card-header">Authentication, Authorization, and Accounting</h5>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<p class="card-text text-justify">
+					Pastikan anda sudah melakukan registrasi sebelum login. Simpan username dan password anda.
+				</p>
+			</div>
+			<form id="authentication_form" class="col-md-6" onSubmit="return AuthenticationSubmit();">
+				<div class="form-group">
+					<label for="authentication_username">Username</label>
+					<input id="authentication_username" class="form-control" name="username" type="text" placeholder="Username" required />
+				</div>
+				<div class="form-group">
+					<label for="authentication_password">Password</label>
+					<input id="authentication_password" class="form-control" name="password" type="password" placeholder="Password" required />
+				</div>
+
+				<button id="authentication_submit" type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+	<div id="authentication_analyze" class="card-footer"></div>
+</div>

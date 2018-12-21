@@ -1,0 +1,27 @@
+AddType text/javascript .js
+AddType text/css .css
+AddType text/cache-manifest .appcache
+DirectoryIndex construction.php main.php index.php
+
+<IfModule mod_headers.c>
+	<FilesMatch "\.(js|css|ttf|ttc|otf|eot|woff|woff2|jpg|jpeg|gif|png|svg)$">
+		Header set Access-Control-Allow-Origin "*"
+		Header set Access-Control-Allow-Headers "*"
+		Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+	</FilesMatch>
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(register|auth|api)$ $1.php?%1 [NC,L]
+
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^trustseal/(.*)$ trustseal.php?code=$1&%1 [NC,L]
+
+Options All -Indexes
